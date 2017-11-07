@@ -1,0 +1,4 @@
+Quando colocamos o webpack reduzimos de 699k para apneas apenas 4,3 sem o node_modules!
+
+-rw-rw-r-- 1 renan renan 699K Nov  7 14:56 build/bundle.js
+-rw-rw-r-- 1 renan renan 4,3K Nov  7 15:02 build/bundle.js
