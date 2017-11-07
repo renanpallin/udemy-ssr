@@ -4,5 +4,9 @@
 		{
 			"path": "."
 		}
-	]
+	],
+    "syntax_override": {
+        "\\.js$": [ "Babel", "JavaScript (Babel)" ]
+    }
+
 }
