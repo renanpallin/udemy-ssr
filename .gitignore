@@ -30,3 +30,7 @@ node_modules
 .lock-wscript
 
 *.lock
+
+build
+
+*.sublime-workspace
