@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './components/Home';
-import UsersList from './components/UsersList';
+import UsersList, { loadData } from './components/UsersList';
 
 const exact = true;
 export default [
@@ -10,6 +10,7 @@ export default [
 		exact,
 	},
 	{
+		loadData,
 		path: '/users',
 		component: UsersList,
 	},
