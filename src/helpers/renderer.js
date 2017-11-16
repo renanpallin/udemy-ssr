@@ -3,6 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import { Provider } from 'react-redux';
+import { Helmet } from 'react-helmet';
 import Routes from '../client/Routes';
 import serialize from 'serialize-javascript';
 
@@ -15,11 +16,15 @@ export default (req, store, context) => {
 		</Provider>
 	);
 
+	const helmet = Helmet.renderStatic();
+
 	return `
 		<html>
 			<head>
-			  <!-- Compiled and minified CSS -->
-			  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+				${helmet.title.toString()}
+				${helmet.meta.toString()}
+				<!-- Compiled and minified CSS -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
             </head>
 			<body>
 				<div id="root">${content}</div>
