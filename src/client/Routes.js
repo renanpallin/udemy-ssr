@@ -1,7 +1,8 @@
 import App from './App';
 import HomePage from './pages/HomePage';
 import UsersListPage from './pages/UsersListPage';
-import NotFountPage from './pages/NotFoundPage';
+import NotFoundPage from './pages/NotFoundPage';
+import AdminsListPage from './pages/AdminsListPage';
 
 const exact = true;
 export default [{
@@ -14,6 +15,9 @@ export default [{
 		...UsersListPage,
 		path: '/users',
 	}, {
-		...NotFountPage,
+		...AdminsListPage,
+		path: '/admins',
+	}, {
+		...NotFoundPage,
 	}],
 }];
